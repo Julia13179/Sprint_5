@@ -1,0 +1,18 @@
+[
+  "tests/test2.py::test2",
+  "tests/test2.py::test_register_new_user",
+  "tests/test_create_ad_authorized.py::test_create_ad_authorized",
+  "tests/test_create_ad_unauthorized.py::test_create_ad_unauthorized",
+  "tests/test_login_existing_user.py::test_login_existing_user",
+  "tests/test_login_existing_user_simple.py::test_login_existing_user_simple",
+  "tests/test_logout_existing_user.py::test_logout_existing_user",
+  "tests/test_reg_existing_user.py::test_reg_existing_user",
+  "tests/test_reg_invalid_email_user.py::test_reg_invalid_email_user",
+  "tests/test_reg_new_user.py::test_reg_new_user",
+  "tests/test_reg_user_bad_email2.py::test_create_ad_authorized",
+  "tests/test_reg_user_bad_email2.py::test_reg_user_bad_email",
+  "tests/test_register_bad_email.py::test_register_bad_email",
+  "tests/test_register_existing_user.py::test_register_existing_user",
+  "tests/test_register_new_user.py::test_register_new_user",
+  "tests_drafts/test_reg_invalid_email_user.py::test_reg_invalid_email_user"
+]

@@ -1,0 +1,8 @@
+{
+  "tests/test_login_existing_user_simple.py::test_login_existing_user_simple": true,
+  "tests/test_reg_user_bad_email2.py::test_reg_user_bad_email": true,
+  "tests/test_register_bad_email.py::test_register_bad_email": true,
+  "tests/test2.py::test2": true,
+  "tests/test2.py::test_register_new_user": true,
+  "tests/test_reg_user_bad_email2.py::test_create_ad_authorized": true
+}
