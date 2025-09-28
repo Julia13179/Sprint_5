@@ -4,5 +4,8 @@
   "tests/test_register_bad_email.py::test_register_bad_email": true,
   "tests/test2.py::test2": true,
   "tests/test2.py::test_register_new_user": true,
-  "tests/test_reg_user_bad_email2.py::test_create_ad_authorized": true
+  "tests/test_reg_user_bad_email2.py::test_create_ad_authorized": true,
+  "tests/test_reg_new_user.py::test_reg_new_user": true,
+  "tests/test_login_logout_user.py::TestLoginLogoutUser::test_logout_user": true,
+  "tests/test_logout_user.py::TestLogoutnUser::test_logout_user": true
 }

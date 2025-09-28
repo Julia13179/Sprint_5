@@ -21,11 +21,8 @@ Sprint_5/
 │── tests/                                     # тестовые файлы
 │   ├── test_login_existing_user.py            # логин существующего пользователя
 │   ├── test_logout_existing_user.py           # выход из аккаунта
-│   ├── test_reg_new_user.py                   # регистрация нового пользователя
-│   ├── test_reg_existing_user.py              # регистрация с уже существующим email
-│   ├── test_reg_user_invalid_email_user.py    # регистрация с email не по маске
-│   ├── test_create_ad_authorized.py           # создание объявления (авторизованный пользователь)
-│   └── test_create_ad_unauthorized.py         # создание объявления (неавторизованный пользователь)
+│   ├── test_registration.py                   # регистрация пользователей
+│   ├── test_create_ad_authorized.py           # создание объявления (авторизованный/неавторизованный пользователь)
 │
 │── locators.py                           # локаторы элементов
 │── .gitignore                            # исключения для git

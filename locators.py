@@ -1,11 +1,5 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
-import random
 
-URL = "https://qa-desk.stand.praktikum-services.ru/"
 
 class Locators:
     # Авторизация / регистрация
@@ -16,7 +10,8 @@ class Locators:
     SUBMIT_LOGIN_BTN = (By.XPATH, "//button[contains(text(),'Войти')]")
     NO_ACCOUNT_BTN = (By.XPATH, "//button[contains(text(),'Нет аккаунта')]")
     CREATE_ACCOUNT_BTN = (By.XPATH, "//button[contains(text(),'Создать аккаунт')]")
-
+    LOGOUT_BTN = (By.XPATH, "//button[@class='spanGlobal btnSmall' and normalize-space()='Выйти']")
+    
     # Профиль / аватар
     AVATAR_ICON = (By.XPATH, "//button[@class='circleSmall']//*[name()='svg']")
     AVATAR_BTN = (By.XPATH, "//button[@class='circleSmall']")
@@ -31,7 +26,8 @@ class Locators:
     AD_TITLE_INPUT = (By.XPATH, '//input[@name="name"]')
     AD_DESC_INPUT = (By.XPATH, '//textarea[@name="description"]')
     AD_PRICE_INPUT = (By.CSS_SELECTOR, 'input[name="price"]')
-
+    AUTH_MODAL_CLOSE_BTN = (By.XPATH, "//button[contains(@class,'popUp_XBtn')]")
+    
     # Выпадающие списки (категория/город)
     DROPDOWN_ARROW = (By.XPATH, "//div[contains(@class, 'dropDownMenu_input')]//button[contains(@class,'dropDownMenu_arrowDown')]")
     DROPDOWN_OPTION_FIRST = (By.XPATH, "//div[contains(@class, 'dropDownMenu_options')]//button[1]")
