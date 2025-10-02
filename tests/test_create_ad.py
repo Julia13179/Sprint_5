@@ -1,12 +1,12 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import *
-from data import existing_email, existing_password
-import time
+from data import existing_email, existing_password, BASE_URL
+
 class TestCreation:
     
-    def test_create_ad_authorized(self, driver, url):
-        driver.get(url)
+    def test_create_ad_authorized(self, driver):
+        driver.get(BASE_URL)
    
 
 
@@ -56,7 +56,8 @@ class TestCreation:
 
     # 11. Нажать «Опубликовать»
         driver.find_element(*Locators.PUBLISH_BTN).click()
-        time.sleep(2)
+        WebDriverWait(driver, 5).until(EC.element_to_be_clickable(Locators.AVATAR_BTN))
+    
     # 12. Кликнуть по аватару
         driver.find_element(*Locators.AVATAR_BTN).click()
     # ждём, что открылась страница профиля с блоком «Мои объявления»
@@ -83,8 +84,8 @@ class TestCreation:
         assert driver.find_element(*Locators.LOGIN_BTN).is_displayed()
     
     
-    def test_create_ad_unauthorized(self, driver, url):
-        driver.get(url)
+    def test_create_ad_unauthorized(self, driver):
+        driver.get(BASE_URL)
     
     # 1. Нажать «Разместить объявление»
         driver.find_element(*Locators.CREATE_AD_BTN).click()
@@ -93,4 +94,4 @@ class TestCreation:
     # 2. Проверить, что появилось модальное «Чтобы разместить объявление, авторизуйтесь»
         assert driver.find_element(*Locators.AUTH_REQUIRED_MODAL).is_displayed()
 
-        driver.quit()
+        

@@ -1,15 +1,13 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import *
-from data import existing_email, existing_password, invalid_email, password_text
+from data import existing_email, existing_password, invalid_email, password_text, BASE_URL
 import time, random
 
 
 class TestRegistration:
-    def test_reg_new_user(self, driver, url):
-        driver.get(url)
+    def test_reg_new_user(self, driver):
+        driver.get(BASE_URL)
     
     
     # 1. Нажать «Вход и регистрация»
@@ -44,8 +42,8 @@ class TestRegistration:
 
     
     
-    def test_reg_existing_user(self, driver, url):
-        driver.get(url)
+    def test_reg_existing_user(self, driver):
+        driver.get(BASE_URL)
     
 
 
@@ -74,8 +72,8 @@ class TestRegistration:
         assert driver.find_element(*Locators.PASSWORD_REPEAT_ERROR).is_displayed()
 
         
-    def test_reg_invalid_email_user(self, driver, url):
-        driver.get(url)
+    def test_reg_invalid_email_user(self, driver):
+        driver.get(BASE_URL)
     
     # 1. Клик по «Вход и регистрация» → ждём «Нет аккаунта»
         driver.find_element(*Locators.LOGIN_BTN).click()
@@ -100,6 +98,5 @@ class TestRegistration:
         assert driver.find_element(*Locators.PASSWORD_ERROR).is_displayed()
         assert driver.find_element(*Locators.PASSWORD_REPEAT_ERROR).is_displayed()
 
-        driver.quit()   
         
         

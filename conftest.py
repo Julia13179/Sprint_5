@@ -11,9 +11,6 @@ def driver():
     yield drv
     drv.quit()
 
-@pytest.fixture
-def url():
-    return "https://qa-desk.stand.praktikum-services.ru/"
 
 @pytest.fixture
 def wait(driver):

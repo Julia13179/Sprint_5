@@ -1,13 +1,11 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import *
-from data import existing_email, existing_password
+from data import existing_email, existing_password, BASE_URL
 
 class TestLoginLogoutUser:
-    def test_login_user(self, driver, url):
-        driver.get(url)
+    def test_login_user(self, driver):
+        driver.get(BASE_URL)
   
 
     # 1. Нажать «Вход и регистрация»
@@ -35,4 +33,4 @@ class TestLoginLogoutUser:
 
     
     
-        driver.quit()
+    

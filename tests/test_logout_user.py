@@ -1,14 +1,11 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import *
-import time, random
-from data import existing_email, existing_password
+from data import existing_email, existing_password, BASE_URL
 
 class TestLogoutUser:
-    def test_logout_user(self, driver, url):
-        driver.get(url)
+    def test_logout_user(self, driver):
+        driver.get(BASE_URL)
   
 
 
@@ -36,4 +33,4 @@ class TestLogoutUser:
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BTN))
         assert driver.find_element(*Locators.LOGIN_BTN).is_displayed()
 
-        driver.quit()
+    
